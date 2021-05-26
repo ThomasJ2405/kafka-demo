@@ -1,0 +1,1 @@
+C:\coding\kafka\kafka_2.13-2.7.1\bin\windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 --from-beginning --topic temperature-readings --property print.key=true --property key.seperator=","

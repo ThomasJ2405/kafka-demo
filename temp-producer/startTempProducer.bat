@@ -1,0 +1,1 @@
+java -cp .\target\temp-producer-1.0-SNAPSHOT.jar com.accenture.twodigits.kafkademo.TempProducer

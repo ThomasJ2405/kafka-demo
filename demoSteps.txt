@@ -1,0 +1,35 @@
+Kafka Streams Demo
+
+Open Windows Terminal with 3 PowerShell Windows
+c:\coding\code\kafka-demo
+C:\coding\code\kafka-demo\temp-producer
+C:\coding\code\kafka-demo\streams-app
+
+1. Starting Kafka Cluster
+docker-compose up -d zookeeper kafka
+
+2. Checking for Cluster
+docker-compose ps
+
+3. Starting the temp-producer 
+startTempProducer.bat
+
+java -cp .\target\temp-producer-1.0-SNAPSHOT.jar com.accenture.twodigits.kafkademo.TempProducer
+
+4. Watching the topic temperature-readings
+C:\coding\kafka\kafka_2.13-2.7.1\bin\windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 --from-beginning --topic temperature-readings --property print.key=true --property key.seperator=","
+
+5. Starting VSCode for stream-app
+
+6. Inspect the stream app
+
+7. Run stream app in debug mode
+
+8. Watching topic max-temperatures
+C:\coding\kafka\kafka_2.13-2.7.1\bin\windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 --from-beginning --topic max-temperatures --property print.key=true --property key.seperator=","
+
+
+x-1 Shutting down all producers, stream apps and consumers
+
+x. Shutdown Kafka
+docker-compose down -v
