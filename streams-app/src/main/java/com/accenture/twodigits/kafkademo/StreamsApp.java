@@ -39,9 +39,9 @@ public class StreamsApp {
     public static void main(String[] args) {
         System.out.printf("*** Starting %s Application ***%n", APPLICATION_NAME);
 
-        Properties config = getConfig();
-        Topology topology = getTopology();
-        KafkaStreams streams =  startApp(config, topology);
+        Properties config = getConfig(); // preparing the config
+        Topology topology = getTopology(); // describing the streams topology
+        KafkaStreams streams =  startApp(config, topology); // starting the stream app
 
         setupShutdownHook(streams);
     }
