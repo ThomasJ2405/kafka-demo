@@ -31,9 +31,9 @@ public class TempProducer {
             Integer diff = tempAverage[stationIndex] - lastTemperature[stationIndex];
             Integer rand = random.nextInt(9);
             Integer delta = 0;
-            if (rand < 4){              // 40% chance that temperature stays the same
+            if (rand < 3){              // 30% chance that temperature stays the same
                 delta = 0;
-            } else if (rand < 8){       // 40% chance that temperature comes closer to the average
+            } else if (rand < 6){       // 30% chance that temperature comes closer to the average
                 delta = 1;
             } else {
                 delta = -1;

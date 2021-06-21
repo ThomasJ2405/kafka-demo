@@ -3,7 +3,7 @@ Kafka Streams Demo
 Open Windows Terminal with 3 PowerShell Windows
 c:\coding\code\kafka-demo
 C:\coding\code\kafka-demo\temp-producer
-C:\coding\code\kafka-demo\streams-app
+C:\coding\code\kafka-demo\streams-app-quarkus
 
 1. Starting Kafka Cluster
 docker-compose up -d zookeeper kafka
@@ -23,7 +23,12 @@ C:\coding\kafka\kafka_2.13-2.7.1\bin\windows\kafka-console-consumer.bat --bootst
 
 6. Inspect the stream app
 
-7. Run stream app in debug mode
+7. Open a Terminal and run quarkus stream app in development mode
+mvn clean compile quarkus:dev
+
+7a Console Maven package und Ausführung
+mvn clean package
+java -jar .\target\quarkus-app\quarkus-run.jar
 
 8. Watching topic max-temperatures
 C:\coding\kafka\kafka_2.13-2.7.1\bin\windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 --from-beginning --topic max-temperatures --property print.key=true --property key.seperator=","
