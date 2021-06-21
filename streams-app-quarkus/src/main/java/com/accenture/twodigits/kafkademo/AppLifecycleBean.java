@@ -1,9 +1,5 @@
 package com.accenture.twodigits.kafkademo;
 
-import java.lang.management.ManagementFactory;
-import java.lang.management.RuntimeMXBean;
-import java.util.Date;
-
 import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.event.Observes;
 
